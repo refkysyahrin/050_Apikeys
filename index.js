@@ -168,7 +168,7 @@ function authenticateToken(req, res, next) {
 
 // Create User (Sesuai C4)
 // Endpoint ini dilindungi oleh middleware 'authenticateToken'
-app.post("/users", authenticateToken, async (req, res) => {
+app.post("/users", async (req, res) => {
   // Ambil data user dari body
   const { firstName, lastName, email, apiKey } = req.body;
 
